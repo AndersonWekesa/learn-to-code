@@ -95,7 +95,7 @@
             form{
                 width: 100%;
                 /*width: 500px;*/
-                height: 400px;
+                height: 450px;
                 background-color: white;
                 border: 0px white;
                 margin: auto;
@@ -121,6 +121,13 @@
                     outline:none !important;
                     border-color:red;
                     
+                }
+
+                .errmsg{
+                    color:red;
+                    margin-left: 300px;
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    font-size:12px;
                 }
 
             .register{
@@ -149,6 +156,7 @@
                 {
                     document.getElementById("fname").style.borderColor="red";
                     document.getElementById("fname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
+                    document.getElementById("errmsg1").innerHTML = "First Name cannot be empty";
                 }
 
                 let lastname = document.forms["signupform"]["lname"].value;
@@ -156,6 +164,7 @@
                 {
                     document.getElementById("lname").style.borderColor="red";
                     document.getElementById("lname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
+                    document.getElementById("errmsg2").innerHTML = "Last Name cannot be empty";
                 }
 
                 let email = document.forms["signupform"]["mail"].value;
@@ -163,6 +172,7 @@
                 {
                     document.getElementById("mail").style.borderColor="red";
                     document.getElementById("mail").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
+                    document.getElementById("errmsg3").innerHTML= "Looks like this is not an email";
                 }
 
                 let password = document.forms["signupform"]["pass"].value;
@@ -170,6 +180,7 @@
                 {
                     document.getElementById("pass").style.borderColor="red";
                     document.getElementById("pass").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
+                    document.getElementById("errmsg4").innerHTML = "Password cannot be empty";
                 }
             }
         </script>
@@ -194,9 +205,13 @@
 
                 <form name="signupform">
                     <input name="fname" id="fname" type="text" placeholder="First Name" required>
+                    <p class="errmsg1"></p>
                     <input name="lname" id="lname" type="text" placeholder="Last Name" required>
+                    <p class="errmsg2"></p>
                     <input name="mail" id="mail" type="email" placeholder="E-Mail Address" required>
+                    <p class="errmsg3"></p>
                     <input name="pass" id="pass" type="password" placeholder="Password" required>
+                    <p class="errmsg4"></p>
                     <button onclick="Validate()" class="register">CLAIM YOUR FREE TRIAL!</button>
                     
                     <p style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" align="center">
