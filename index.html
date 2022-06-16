@@ -120,7 +120,7 @@
                 input:focus:invalid{
                     outline:none !important;
                     border-color:red;
-                    background: url(icon-error.svg) no-repeat 95% 50% scroll;
+                    
                 }
 
             .register{
@@ -148,24 +148,32 @@
                 if (firstname == "")
                 {
                     document.getElementById("fname").style.borderColor="red";
+                    document.getElementById("fname").style.background = url(icon-error.svg); //no-repeat 95% 50% scroll;
+                    //document.getElementById("fname").style.background = no-repeat;
+                    //document.getElementById("fname").style.background = 95%
+                    //document.getElementById("fname").style.background = 
+                    //document.getElementById("fname").style.background
                 }
 
                 let lastname = document.forms["signupform"]["lname"].value;
                 if (lastname == "")
                 {
                     document.getElementById("lname").style.borderColor="red";
+                    document.getElementById("fname").style.background = url(icon-error.svg);
                 }
 
                 let email = document.forms["signupform"]["mail"].value;
                 if (email == "")
                 {
                     document.getElementById("mail").style.borderColor="red";
+                    document.getElementById("fname").style.background = url(icon-error.svg);
                 }
 
                 let password = document.forms["signupform"]["pass"].value;
                 if (password == "")
                 {
                     document.getElementById("pass").style.borderColor="red";
+                    document.getElementById("fname").style.background = url(icon-error.svg);
                 }
             }
         </script>
