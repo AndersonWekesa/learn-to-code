@@ -14,10 +14,6 @@
                 .trial{
                     height:70px;
                 }
-
-                .text-container{
-                    width:100%;
-                }
             }
 
 
@@ -42,8 +38,7 @@
             }
 
             .text-container{
-                width:50%;
-                /*width:500px;*/
+                width:500px;
                 height: 540px;
                 /*background-color:red;*/
                 margin: auto;
@@ -84,9 +79,10 @@
                 max-width:100%;
                 /*width: 500px;*/
                 height: 40px;
+                text-align: center;
+                background:hsl(248,32%,49%);
                 border: 2px solid black;
                 border-radius: 8px;
-                background-color: blueviolet;
                 color: white;
             }
 
@@ -117,10 +113,15 @@
                 border: 1px solid grey; 
                 font-size: medium;
                 font-family: 'Times New Roman', Times, serif;
-                background: url(icon-error.svg) no-repeat scroll;
                 background-position: right;
                 
             }
+
+                input:focus:invalid{
+                    outline:none !important;
+                    border-color:red;
+                    background: url(icon-error.svg) no-repeat 95% 50% scroll;
+                }
 
             .register{
                 width: 450px;
@@ -139,6 +140,35 @@
                     background-color:white;
                 }
         </style>
+
+        <script>
+            function Validate()
+            {
+                let firstname = document.forms["signupform"]["fname"].value;
+                if (firstname == "")
+                {
+                    document.getElementById("fname").style.borderColor="red";
+                }
+
+                let lastname = document.forms["signupform"]["lname"].value;
+                if (lastname == "")
+                {
+                    document.getElementById("lname").style.borderColor="red";
+                }
+
+                let email = document.forms["signupform"]["mail"].value;
+                if (email == "")
+                {
+                    document.getElementById("mail").style.borderColor="red";
+                }
+
+                let password = document.forms["signupform"]["pass"].value;
+                if (password == "")
+                {
+                    document.getElementById("pass").style.borderColor="red";
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -158,17 +188,17 @@
                     <p style="margin:auto; text-align:center"><strong>Try it for free 7 days</strong> then $20/mo. thereafter</p>
                 </div>
 
-            <form>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="text" placeholder="E-Mail Address" required >
-                <input type="password" placeholder="Password" required >
-                <button class="register">CLAIM YOUR FREE TRIAL!</button>
-                
-                <p style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" align="center">
-                    By clicking the button, you are agreeing to our Terms and Services
-                </p>
-            </form>
+                <form name="signupform" method="post">
+                    <input name="fname" id="fname" type="text" placeholder="First Name">
+                    <input name="lname" id="lname" type="text" placeholder="Last Name">
+                    <input name="mail" id="mail" type="email" placeholder="E-Mail Address">
+                    <input name="pass" id="pass" type="password" placeholder="Password">
+                    <button onclick="Validate()" class="register">CLAIM YOUR FREE TRIAL!</button>
+                    
+                    <p style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" align="center">
+                        By clicking the button, you are agreeing to our Terms and Services
+                    </p>
+                </form>
 
             </div>
         </div> 
