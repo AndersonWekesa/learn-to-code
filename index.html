@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            @media only screen and (max-width: 638px) {
+                .main-container{
+                    width:100%;
+                    display:flex;
+                    flex-direction:column;
+                }
+
+                .trial{
+                    height:70px;
+                }
+            }
+
+
+
+
+            @font-face {
+                font-family: Poppins;
+                src: url(Poppins-Black.ttf);
+            }
+            html{
+                background-image: url(bg-intro-desktop.png);
+                background-color:palevioletred;
+            }
+
+            .main-container{
+                width:90%;
+                /*width:1200px;*/
+                height:600px;
+                /*background-color: purple;*/
+                display:flex;
+                margin: auto;
+            }
+
+            .text-container{
+                width:500px;
+                height: 540px;
+                /*background-color:red;*/
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text{
+                width:90%;
+                /*width: 380px;*/
+                height: 200px;
+                /*background-color: blue;*/
+                margin: auto;
+            }
+
+            .form-container{
+                width:500px;
+                height: 500px;
+                /*background-color:blue;*/
+                margin: auto;
+            }
+
+            h1{
+                color: white;
+                margin: auto;
+                font-family: Poppins;
+            }
+
+            p{
+                color: white;
+                margin: auto;
+                font-family: Poppins;
+                
+            }
+
+            .trial{
+                max-width:100%;
+                /*width: 500px;*/
+                height: 40px;
+                border: 2px solid black;
+                border-radius: 8px;
+                background-color: blueviolet;
+                color: white;
+            }
+
+                .trial p{
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    padding-top:auto;
+                    padding-bottom:auto;
+                }
+
+            form{
+                width: 100%;
+                /*width: 500px;*/
+                height: 400px;
+                background-color: white;
+                border: 0px white;
+                margin: auto;
+                margin-top: 20px;
+                padding-left: 10px;
+                padding-top: 10px;
+                border-radius: 8px;
+            }
+
+            input{
+                width: 450px;
+                height: 35px;
+                margin: 15px;
+                border-radius: 5px;
+                border: 1px solid grey; 
+                font-size: medium;
+                font-family: 'Times New Roman', Times, serif;
+                background: url(icon-error.svg) no-repeat scroll;
+                background-position: right;
+                
+            }
+
+            .register{
+                width: 450px;
+                height: 45px;
+                margin: 15px;
+                border-radius: 5px;
+                border: 1px solid black; 
+                background-color: green;
+                color: white;
+                font-weight: 700;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+                .register:hover{
+                    color:black;
+                    background-color:white;
+                }
+        </style>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="text-container">
+                <div class="text">
+                    <h1>Learn to code by watching others</h1>
+                    <br/>
+                    <p><small> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                        but understanding how developers think is invaluable.</small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="trial">
+                    <p style="margin:auto; text-align:center"><strong>Try it for free 7 days</strong> then $20/mo. thereafter</p>
+                </div>
+
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="E-Mail Address" required >
+                <input type="password" placeholder="Password" required >
+                <button class="register">CLAIM YOUR FREE TRIAL!</button>
+                
+                <p style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" align="center">
+                    By clicking the button, you are agreeing to our Terms and Services
+                </p>
+            </form>
+
+            </div>
+        </div> 
+    </body>
+
+
+</html>
