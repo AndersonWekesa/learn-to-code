@@ -154,33 +154,33 @@
                 let firstname = document.forms["signupform"]["fname"].value;
                 if (firstname == "")
                 {
-                    document.getElementById("fname").style.borderColor="red";
+                    document.getElementById("fname").style.borderColor = "red";
                     document.getElementById("fname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
-                    document.getElementById("errmsg1").innerHTML = "First Name cannot be empty";
+                    document.getElementById("errfname").innerHTML = "First Name cannot be empty";
                 }
 
                 let lastname = document.forms["signupform"]["lname"].value;
                 if (lastname == "")
                 {
-                    document.getElementById("lname").style.borderColor="red";
+                    document.getElementById("lname").style.borderColor = "red";
                     document.getElementById("lname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
-                    document.getElementById("errmsg2").innerHTML = "Last Name cannot be empty";
+                    document.getElementById("errlname").innerHTML = "Last Name cannot be empty";
                 }
 
                 let email = document.forms["signupform"]["mail"].value;
                 if (email == "")
                 {
-                    document.getElementById("mail").style.borderColor="red";
+                    document.getElementById("mail").style.borderColor = "red";
                     document.getElementById("mail").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
-                    document.getElementById("errmsg3").innerHTML= "Looks like this is not an email";
+                    document.getElementById("errmail").innerHTML = "Looks like this is not an email";
                 }
 
                 let password = document.forms["signupform"]["pass"].value;
                 if (password == "")
                 {
-                    document.getElementById("pass").style.borderColor="red";
+                    document.getElementById("pass").style.borderColor = "red";
                     document.getElementById("pass").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
-                    document.getElementById("errmsg4").innerHTML = "Password cannot be empty";
+                    document.getElementById("errpass").innerHTML = "Password cannot be empty";
                 }
             }
         </script>
@@ -203,15 +203,15 @@
                     <p style="margin:auto; text-align:center"><strong>Try it for free 7 days</strong> then $20/mo. thereafter</p>
                 </div>
 
-                <form name="signupform">
+                <form id="henllo" name="signupform">
                     <input name="fname" id="fname" type="text" placeholder="First Name" required>
-                    <p class="errmsg1"></p>
+                    <p id="errfname" style="color:red; margin-left: 300px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:12px;"></p>
                     <input name="lname" id="lname" type="text" placeholder="Last Name" required>
-                    <p class="errmsg2"></p>
+                    <p id="errlname" style="color:red; margin-left: 300px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:12px;"></p>
                     <input name="mail" id="mail" type="email" placeholder="E-Mail Address" required>
-                    <p class="errmsg3"></p>
+                    <p id="errmail" style="color:red; margin-left: 300px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:12px;"></p>
                     <input name="pass" id="pass" type="password" placeholder="Password" required>
-                    <p class="errmsg4"></p>
+                    <p id="errpass" style="color:red; margin-left: 300px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:12px;"></p>
                     <button onclick="Validate()" class="register">CLAIM YOUR FREE TRIAL!</button>
                     
                     <p style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" align="center">
