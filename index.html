@@ -4,7 +4,7 @@
     <head>
         <title>Registration Form</title>
         <style>
-            @media only screen and (max-width: 638px) {
+            @media only screen and (max-width: 375px) {
                 .main-container{
                     width:100%;
                     display:flex;
@@ -12,11 +12,11 @@
                 }
 
                 .trial{
-                    height:70px;
+                    width:80% !important;
                 }
             }
 
-
+            /*---------*/
 
 
             @font-face {
@@ -29,10 +29,9 @@
             }
 
             .main-container{
-                width:90%;
+                width:95%;
                 /*width:1200px;*/
-                height:600px;
-                /*background-color: purple;*/
+                background-color: lawngreen;
                 display:flex;
                 margin: auto;
             }
@@ -40,7 +39,7 @@
             .text-container{
                 width:500px;
                 height: 540px;
-                /*background-color:red;*/
+                background-color:red;
                 margin: auto;
                 display: flex;
                 justify-content: center;
@@ -57,8 +56,8 @@
 
             .form-container{
                 width:500px;
-                height: 500px;
-                /*background-color:blue;*/
+                height: 540px;
+                background-color:blue;
                 margin: auto;
             }
 
@@ -76,14 +75,18 @@
             }
 
             .trial{
-                max-width:100%;
+                width:100%;
                 /*width: 500px;*/
                 height: 40px;
                 text-align: center;
-                background:hsl(248,32%,49%);
-                border: 2px solid black;
+                background:transparent; /*hsl(248,32%,49%);*/
                 border-radius: 8px;
                 color: white;
+                margin-left:auto;
+                margin-right:auto;
+                display:flex;
+                align-items:center;
+                justify-content:center;
             }
 
                 .trial p{
@@ -96,7 +99,7 @@
                 width: 100%;
                 /*width: 500px;*/
                 height: 450px;
-                background-color: white;
+                background-color: transparent;
                 border: 0px white;
                 margin: auto;
                 margin-top: 20px;
@@ -106,7 +109,7 @@
             }
 
             input{
-                width: 450px;
+                width: 90%;
                 height: 35px;
                 margin: 15px;
                 border-radius: 5px;
@@ -117,7 +120,7 @@
                 
             }
 
-                input:focus:invalid{
+               /* input:focus:invalid{
                     outline:none !important;
                     border-color:red;
                     
@@ -128,7 +131,7 @@
                     margin-left: 300px;
                     font-family:Georgia, 'Times New Roman', Times, serif;
                     font-size:12px;
-                }
+                }*/
 
             .register{
                 width: 450px;
@@ -158,6 +161,11 @@
                     document.getElementById("fname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
                     document.getElementById("errfname").innerHTML = "First Name cannot be empty";
                 }
+                else{
+                    document.getElementById("fname").style.borderColor = "black";
+                    document.getElementById("fname").style.background = "none";
+                    document.getElementById("errfname").innerHTML = "";
+                }
 
                 let lastname = document.forms["signupform"]["lname"].value;
                 if (lastname == "")
@@ -165,6 +173,11 @@
                     document.getElementById("lname").style.borderColor = "red";
                     document.getElementById("lname").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
                     document.getElementById("errlname").innerHTML = "Last Name cannot be empty";
+                }
+                else{
+                    document.getElementById("lname").style.borderColor = "black";
+                    document.getElementById("lname").style.background = "none";
+                    document.getElementById("errlname").innerHTML = "";
                 }
 
                 let email = document.forms["signupform"]["mail"].value;
@@ -174,6 +187,11 @@
                     document.getElementById("mail").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
                     document.getElementById("errmail").innerHTML = "Looks like this is not an email";
                 }
+                else{
+                    document.getElementById("mail").style.borderColor = "black";
+                    document.getElementById("mail").style.background = "none";
+                    document.getElementById("errmail").innerHTML = "";
+                }
 
                 let password = document.forms["signupform"]["pass"].value;
                 if (password == "")
@@ -181,6 +199,11 @@
                     document.getElementById("pass").style.borderColor = "red";
                     document.getElementById("pass").style.background = "url(icon-error.svg) no-repeat 95% 50% scroll";
                     document.getElementById("errpass").innerHTML = "Password cannot be empty";
+                }
+                else{
+                    document.getElementById("pass").style.borderColor = "black";
+                    document.getElementById("pass").style.background = "none";
+                    document.getElementById("errpass").innerHTML = "";
                 }
             }
         </script>
@@ -200,7 +223,7 @@
 
             <div class="form-container">
                 <div class="trial">
-                    <p style="margin:auto; text-align:center"><strong>Try it for free 7 days</strong> then $20/mo. thereafter</p>
+                    <p style="text-align:center"><strong>Try it for free 7 days</strong> then $20/mo. thereafter</p>
                 </div>
 
                 <form id="henllo" name="signupform">
